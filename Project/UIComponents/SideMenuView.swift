@@ -41,7 +41,7 @@ final class SideMenuView: UIView {
         
         guard let leadingConstraint = leadingConstraint else { return }
         
-        leadingConstraint.constant = shouldOpen ? 0 : -UIScreen.main.bounds.width
+        leadingConstraint.constant = shouldOpen ? 0 : -UIScreen.main.bounds.width/2
 
         UIView.animate(withDuration: 0.6) {
             self.superview?.layoutIfNeeded()
@@ -58,7 +58,7 @@ final class SideMenuView: UIView {
     private func setupConstraints() {
         guard let superview = superview else { return }
 
-        leadingConstraint = leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: -UIScreen.main.bounds.width)
+        leadingConstraint = leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: -UIScreen.main.bounds.width/2)
         
         if let leadingConstraint = leadingConstraint {
             NSLayoutConstraint.activate([
