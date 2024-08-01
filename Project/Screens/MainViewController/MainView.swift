@@ -16,6 +16,7 @@ final class MainView: UIView {
     let searchController = UISearchController()
     
     // MARK: - Init
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -29,6 +30,7 @@ final class MainView: UIView {
     }
 
     // MARK: - Private methods
+    
     private func setupViews() {
         backgroundColor = .black
 

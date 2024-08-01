@@ -40,7 +40,6 @@ final class SideMenuView: UIView {
     func toggleMenu(shouldOpen: Bool) {
         isMenuOpen = shouldOpen
         
-        // Проверка, что leadingConstraint не nil
         guard let leadingConstraint = leadingConstraint else { return }
         
         leadingConstraint.constant = shouldOpen ? 0 : -menuWidth
